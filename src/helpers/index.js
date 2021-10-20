@@ -12,7 +12,8 @@ export const generatePDF = async (projectId) => {
 /**
  * 
  * @param {string} emailDestination 
- * @param {Array} payload 
+ * @param {Array} payload
+ * @returns {Promise.<*>}
  */
 export const sendEmail = async (emailDestination, payload) => {
   // NOTE: assuming the function is implemented!
