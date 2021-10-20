@@ -1,5 +1,5 @@
 /**
- * Webpack.config will define the rules that
+ * webpack.config will define the rules that
  * the server will compile by.
  * One of the main configurations goal is to compile ES6 code
  * to ES5 using Babel.
@@ -8,10 +8,10 @@
  const GenerateJsonPlugin = require("generate-json-webpack-plugin")
  const pkg = require("./package")
  
- // Set externals that you don't want to build by webpack
+ // set externals that you don't want to build by webpack
  const externals = Object.keys(pkg.dependencies)
  
- // Defines json of packages that will exclude in build process
+ // defines json of packages that will exclude in build process
  // the packeges will be built on dockerfile, therefore there is no
  // need to includes them on webpack build process
  const excludePackeges = externals.reduce(
@@ -20,7 +20,7 @@
  )
  
  /**
-  * Build package.json file
+  * build package.json file
   */
  const genPackage = () => ({
    name: pkg.name,
@@ -38,7 +38,7 @@
  })
  
   /**
-   * Expend webpack config according to prod env
+   * expend webpack config according to prod env
    */
   const webpackProdConfigs = () => {
    return {
@@ -60,7 +60,7 @@
   }
  
   /**
-   * Expend webpack config according to dev env
+   * expend webpack config according to dev env
    */
   const webpackDevConfigs = () => {
     return {
@@ -79,24 +79,24 @@
     }
   }
  
-  // Base webpack confgurations
-  // Should be extended by production or dev
+  // base webpack confgurations
+  // should be extended by production or dev
   let baseConfig = {
-    // Entry point
+    // entry point
     entry: [`${__dirname}/src/index.js`],
  
-    // Output compiled file
+    // output compiled file
     output: {
       path: `${__dirname}/dist`,
       filename: "index.js",
       libraryTarget: "commonjs2"
     },
  
-    // Target Build
+    // target Build
     target: "node"
   }
  
-  // Expend base config according to runtime env
+  // expend base config according to runtime env
   baseConfig = {
     ...baseConfig,
     ...(process.env.NODE_ENV === "production" ? webpackProdConfigs() : webpackDevConfigs())
