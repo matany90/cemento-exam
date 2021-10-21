@@ -11,11 +11,11 @@ export const generatePDF = async (projectId) => {
   
 /**
  * 
- * @param {string} emailDestination 
- * @param {Array} payload
+ * @param {string} emailDestination - email address destenation
+ * @param {Array<string>} pdfUrls - pdfs urls array
  * @returns {Promise.<*>}
  */
-export const sendEmail = async (emailDestination, payload) => {
+export const sendEmail = async (emailDestination, pdfUrls) => {
   // NOTE: assuming the function is implemented!
   // meanwile, we'll return an true flag
   return true

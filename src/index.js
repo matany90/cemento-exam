@@ -3,7 +3,6 @@ import cors from "cors"
 
 import eventRoutes from "./api/v1/events"
 
-
 // init express instance
 const app = express()
 

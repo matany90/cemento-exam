@@ -11,7 +11,7 @@ router.post("/callback", [validateEventConfiguration], async (req, res) => {
     const triggeredEvents = Object.values(req.body.definitions.eventConfigurations)
 
     // handle each event and collect array of promises
-    triggeredEvents.map(async ev => {
+    const eventsPrms = triggeredEvents.map(async ev => {
       switch (ev.id) {
       case "safetySummeryReport":
         return handleSafetySummeryReport(req.body.definitions.projects || {})
@@ -21,7 +21,7 @@ router.post("/callback", [validateEventConfiguration], async (req, res) => {
     })
 
     // resolve promises
-    await Promise.all(triggeredEvents)
+    await Promise.all(eventsPrms)
 
     // returns successful response
     res.json({ successfulEvents: true })
