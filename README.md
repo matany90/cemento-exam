@@ -5,6 +5,7 @@ The goal of the assignment is to create an endpoint that you know how to handle 
 ## Tech stack
 1. Node with express
 2. Docker
+3. Webpack for using ES6 with Node environment
 
 ## endpoints:
 ```
