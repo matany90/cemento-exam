@@ -15,7 +15,7 @@ POST /api/v1/events/callback - handle cementos events (in prodaction we'll need 
 ```sh
 # clone the repo
 cd $YOUR_LOCAL_PATH
-git clone REPO
+git clone https://github.com/matany90/cemento-exam.git
 
 # install dependencies
 cd cemento-exam
