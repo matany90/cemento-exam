@@ -12,7 +12,7 @@ GET /api/v1/status - server health check
 ```
 
 ```
-POST /api/v1/events/callback - handle cementos events (in prodaction we'll need a cron job that will hit this endpoint)
+POST /api/v1/events/callback - handle cemento's events (in prodaction we'll need a cron job that will hit this endpoint)
 ```
 
 ## Usage
