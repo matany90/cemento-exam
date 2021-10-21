@@ -1,4 +1,4 @@
-# Matan's Cemeneto assignment
+# Matan's Cemento assignment
 
 The goal of the assignment is to create an endpoint that you know how to handle with a weekly event that will hit the endpoint.
 
