@@ -36,7 +36,7 @@ make docker-build
 make docker-run
 ```
 
-## Test the callbacl endpoint:
+## Test the callback endpoint:
 ```sh
 cd cemento-exam
 bash ./tests/callback.sh
