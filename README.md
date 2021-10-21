@@ -32,7 +32,7 @@ npm run dev
 make docker-build
 
 # run docker image after build
-make docker run
+make docker-run
 ```
 
 ## Test the callbacl endpoint:
