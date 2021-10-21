@@ -30,3 +30,9 @@ make docker-build
 # run docker image after build
 make docker run
 ```
+
+## Test the callbacl endpoint:
+```sh
+cd cemento-exam
+bash ./tests/callback.sh
+```
